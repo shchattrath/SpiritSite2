@@ -1,0 +1,31 @@
+@import './_variables';
+@import './_navigation';
+
+body {
+    .site-title{
+  
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 1.3em;
+    font-family: "HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
+    margin-left:4px;
+    }
+
+    .nav-options{
+  
+    font-size: 1.35em;
+    line-height: 1em;
+    margin-left: 1px;
+    font-family: "Helvetica Narrow","HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
+    }
+    .creator-options{
+  
+        font-size: 1.35em;
+        line-height: 1em;
+        margin-left: 1px;
+        font-family: "Helvetica Narrow","HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
+        }
+    margin:0;
+
+
+}
