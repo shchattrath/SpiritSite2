@@ -1,0 +1,69 @@
+
+
+
+
+.app{
+    .container{
+            .link{
+                font-family: "Helvetica Narrow","HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
+                text-decoration: none;
+            }
+            .textbox{
+               font-family: "Helvetica Narrow","HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
+                 
+            }
+            .auth {
+             
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                h1{
+                    font-family: "Helvetica Narrow","HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
+                    font-size: 60px;
+       
+                }
+                span{
+                    font-size: 14px;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    
+                }
+                p{
+                    font-size: 14px;
+                    font-family: "Helvetica Narrow","HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    color:red;
+                }
+                form{
+                    font-family: "Helvetica Narrow","HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    width: 200px;
+                    gap:10px;
+                    input{
+                        font-family: "Helvetica Narrow","HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
+                        padding:10px;
+                        border:none;
+                        border-bottom: 1px solid lightblue;
+                     
+                    }
+                    button{
+                        border:none;
+                        cursor: pointer;
+                        padding:10px;
+                        color: gray;
+            
+                    }
+                }
+
+            }
+    }
+}

@@ -8,10 +8,6 @@ const navLinks = [
     path: '/'
   },
   {
-    title: 'Blog',
-    path: '/blog'
-  },
-  {
     title: 'Contact',
     path: '/contact'
   },
@@ -43,3 +39,4 @@ export default function Navigation() {
     </nav>
   );
 }
+

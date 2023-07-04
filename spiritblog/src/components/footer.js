@@ -2,7 +2,8 @@ import React from 'react'
 
 const Footer = () => {
     return(
-            <div>hello</div>
+       // links to TikTok and Instagram
+       <div>footer</div>
     )
 }
 export default Footer
