@@ -8,7 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Login from './components/pages/login'
-import Home from './components/home'
+import Home from './components/pages/home'
 import Create from './components/pages/create'
 import Contact from './components/pages/contact'
 import Shop from './components/pages/shop'

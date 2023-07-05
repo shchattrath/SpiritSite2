@@ -1,7 +1,49 @@
+.home {
+    margin-left: 70px;
+    margin-top: 40px;
+    margin-right: 70px;
+    font-family: "HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
+  
+    .posts {
+      display: flex;
+      flex-direction: column;
+      font-family: "HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
+  
+      .post {
+        display: flex;
+        align-items: center;
+        margin-bottom: 75px;
 
+        button{
+            border:none;
+            cursor: pointer;
+            padding:10px;
+            color: gray;
 
-
-
+        }
+  
+        .img {
+          margin-right: 20px;
+  
+          img {
+ 
+            max-height: 600px; /* Adjust the height as needed */
+          }
+        }
+  
+        .content {
+          .clickable {
+            color: black;
+            text-decoration: none;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+  
 .app{
     .container{
             .link{
@@ -12,6 +54,7 @@
                font-family: "Helvetica Narrow","HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
                  
             }
+
             .auth {
              
                 display:flex;
@@ -65,5 +108,19 @@
                 }
 
             }
-    }
+    
+            footer{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+                margin: 40px;
+                img{
+
+                    height:50px;
+                    width: auto;
+                }
+            }
+        }
+
 }
