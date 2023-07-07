@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from './components/navigation';
-import AuthNavigation from './components/navigation';
+
 import {
   createBrowserRouter,
   Outlet,
@@ -9,9 +9,8 @@ import {
 } from "react-router-dom";
 import Login from './components/pages/login'
 import Home from './components/pages/home'
-import Create from './components/pages/create'
-import Contact from './components/pages/contact'
-import Shop from './components/pages/shop'
+import Blog from './components/pages/blog'
+// import Shop from './components/pages/shop'
 import Footer from './components/footer'
 import Register from './components/pages/register'
 import Single from './components/pages/single'
@@ -24,20 +23,17 @@ const navLinks = [
       path: '/'
   },
   {
-      title:'Contact',
-      path:'/contact'
-  },
-  {
-      title:'Shop',
-      path:'/shop'
-  },
+    title: 'Blog',
+    path: '/Blog'
+},
+  // {
+  //     title:'Shop',
+  //     path:'/shop'
+  // },
   {
       title:'Login',
       path:'/login'
   },
-  {   title:'Create',
-      path: '/create'
-  }
       
 ]
 
@@ -63,18 +59,15 @@ const router = createBrowserRouter([
     {
       path: "/post/:id",
       element: <Single/>
-    },
-    {
-      path: "/create",
-      element: <Create/>
     },  
+    // {
+    //   path: "/shop",
+    //   element: <Shop/>
+    // },
+    
     {
-      path: "/shop",
-      element: <Shop/>
-    },
-    {
-      path: "/contact",
-      element: <Contact/>
+      path: "/blog",
+      element: <Blog/>
     },
     {
       path: "/register",

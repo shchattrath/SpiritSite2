@@ -14,7 +14,13 @@ const Home = () => {
             title: "Makoto Shinkai's 'Suzume' - immoral or misunderstood?",
             desc: "The widely-acclaimed creator has enjoyed the success of his new film - but the age-gap between the main characters has raised concern among viewers",
             img: "https://media.timeout.com/images/105882001/image.jpg"
-        }
+        },
+        {
+           id: 3,
+           title: "A New Fashion District Emerges.",
+           desc: "For young adults, Capitol Hill has always been the epicenter of arts in the Seattle area, however the Eastside has begun to take in some of that spark.",
+           img: "https://www.theurbanist.org/wp-content/uploads/2022/07/The-Bellevue-courtesy-of-Kohn-Pederson-Fox.jpg"
+       }
     ];
 
     return (

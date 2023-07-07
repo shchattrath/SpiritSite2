@@ -7,10 +7,10 @@ const Login = () => {
             
             <h1>Login</h1>
             <form>
-                <input type = "text" placeholder ='username'/>
-                <input type = "text" placeholder ='password'/>
+                <input className='textbox' type = "text" placeholder ='username'/>
+                <input className='textbox' type = "text" placeholder ='password'/>
                 <p>An error has occurred, please try again.</p>
-                <button>login</button>
+                <button  className='textbox' >login</button>
                 <span><Link className='link' to="/register">Register Here</Link> </span>
             </form>
             
