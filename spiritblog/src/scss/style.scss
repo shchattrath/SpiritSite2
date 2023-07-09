@@ -1,5 +1,25 @@
+.single {
+  display: flex;
+  gap: 50px;
+  h1{
+    align-items: center;
+  }
+  .img{
+    img{
+      width:300px;
+      height:100%;
+      object-fit: cover;
+    }
+    align-items: center;
+  }
+
+}
+
+
+
 .home {
     margin-left: 70px;
+    
     margin-top: 40px;
     margin-right: 70px;
     font-family: "HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
@@ -12,27 +32,33 @@
       .post {
         display: flex;
         align-items: center;
+        gap:70px;
         margin-bottom: 75px;
+        
+        &:nth-child(2n){
+          flex-direction: row-reverse;
+        }
 
         button{
             border:none;
             cursor: pointer;
             padding:10px;
             color: gray;
-
         }
   
         .img {
           margin-right: 20px;
+          flex:1;
   
           img {
- 
-            max-height: 600px; /* Adjust the height as needed */
+            max-width: 60dvw;
+            max-height: 300px; /* Adjust the height as needed */
           }
         }
   
         .content {
             color:#383838;
+            flex:2;
           .clickable {
             color: black;
             text-decoration: none;
@@ -56,12 +82,13 @@
     font-family: "HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
   
     .posts {
-      display: flex;
-      flex-direction: column;
+  
       font-family: "HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
   
       .post {
-        display: flex;
+        display:flex;
+        flex-direction:column;
+        
         align-items: center;
         margin-bottom: 75px;
 

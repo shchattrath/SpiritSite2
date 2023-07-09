@@ -28,8 +28,7 @@ const Home = () => {
             <div className='posts'>
                 {posts.map((post, index) => (
                     <div className={`post ${index % 2 === 0 ? 'left' : 'right'}`} key={post.id}>
-                        {index % 2 === 0 ? (
-                            <>
+                        
                                 <div className="img">
                                     <img src={post.img} alt="" />
                                 </div>
@@ -40,21 +39,9 @@ const Home = () => {
                                     <p>{post.desc}</p>
                                   
                                 </div>
-                            </>
-                        ) : (
-                            <>
-                                <div className='content'>
-                                    <Link to={`/post/${post.id}`} className="clickable">
-                                        <h1>{post.title}</h1>
-                                    </Link>
-                                    <p>{post.desc}</p>
-                                    
-                                </div>
-                                <div className="img">
-                                    <img src={post.img} alt="" />
-                                </div>
-                            </>
-                        )}
+                           
+                         
+                       
                     </div>
                 ))}
             </div>
