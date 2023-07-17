@@ -74,8 +74,56 @@
 }  
 
 
+//WRITE
+.write{
+  font-family: "HelveticaNeueW01-77BdCn 692722", Arial, sans-serif;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  .content{
+    flex:5;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    input{
+      padding: 10px;
+      border: 1px solid lightgray;
+    }
+    .EditorContainer{
+      height: 300px;
+      overflow: scroll;
+      border: 1px solid lightgray;
+      .editor{
+        height: 100%;
+        border: none;
+      }
+    }
+  }
+  .menu{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 10px;
+    .item{
+      flex:1;
+    
+      .buttons{
+        button{
+          border:none;
+          cursor: pointer;
+          padding:10px;
+          color: gray;
+          
+      
+        }
+      }
+    }
+  
+  }
 
-
+}
 .home {
     margin-left: 70px;
     

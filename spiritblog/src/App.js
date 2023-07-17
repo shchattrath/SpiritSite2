@@ -14,6 +14,7 @@ import Blog from './components/pages/blog'
 import Footer from './components/footer'
 import Register from './components/pages/register'
 import Single from './components/pages/single'
+import Create from './components/pages/create'
 import "./scss/style.scss"
 
 
@@ -25,7 +26,11 @@ const navLinks = [
   {
     title: 'Blog',
     path: '/Blog'
-},
+  },
+  {
+    title: 'Create',
+    path: '/create'
+  },
   // {
   //     title:'Shop',
   //     path:'/shop'
@@ -76,6 +81,11 @@ const router = createBrowserRouter([
     {
       path:"/login",
       element: <Login/>
+    },
+    
+    {
+      path:"/Create",
+      element: <Create/>
     }
   ]
   },
