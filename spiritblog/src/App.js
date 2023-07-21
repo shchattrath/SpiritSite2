@@ -15,6 +15,10 @@ import Footer from './components/footer'
 import Register from './components/pages/register'
 import Single from './components/pages/single'
 import Create from './components/pages/create'
+import Fashion from './components/pages/fashion'
+import Development from './components/pages/development'
+import Culture from './components/pages/culture'
+import BlogNav from './components/blognav'
 import "./scss/style.scss"
 
 
@@ -39,6 +43,18 @@ const navLinks = [
       title:'Login',
       path:'/login'
   },
+  {
+    title: 'Development',
+    path: '/blog/development'
+  },  
+  {
+    title: 'Culture',
+    path: '/blog/culture'
+  },  
+  {
+    title: 'Fashion',
+    path: '/blog/fashion'
+  }
       
 ]
 
@@ -72,7 +88,10 @@ const router = createBrowserRouter([
     
     {
       path: "/blog",
-      element: <Blog/>
+      element: <div>
+                  <BlogNav/>
+                  <Blog/>
+                </div>
     },
     {
       path: "/register",
@@ -86,6 +105,30 @@ const router = createBrowserRouter([
     {
       path:"/Create",
       element: <Create/>
+    },
+    
+    {
+      path:"/blog/fashion",
+      element: <div>
+                  <BlogNav/>
+                  <Fashion/>
+                </div>
+    },
+    
+    {
+      path:"/blog/development",
+      element: <div>
+                  <BlogNav/>
+                  <Development/>
+                </div>
+    },
+    
+    {
+      path:"/blog/culture",
+      element: <div>
+                  <BlogNav/>
+                  <Culture/>
+                </div>
     }
   ]
   },
