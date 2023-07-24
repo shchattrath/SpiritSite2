@@ -14,6 +14,12 @@ const Single = () => {
             title: "A New Fashion District Emerges.",
             desc: "For young adults, Capitol Hill has always been the epicenter of arts in the Seattle area, however the Eastside has begun to take in some of that spark.",
             img: "https://www.theurbanist.org/wp-content/uploads/2022/07/The-Bellevue-courtesy-of-Kohn-Pederson-Fox.jpg"
+        },
+        {
+            id:4,
+            title: "Oppenheimer's Biggest Mistake - An Analysis of the Father of Modern World",
+            desc: "The Christopher Nolan film highlighting Oppenhiemer's life and the major events surrounding his research career makes sure to highlight one key mistake in Oppenheimer's Life, that is - rebellion. ",
+            img: "https://media.gq.com/photos/645956c367d4264086a5d77f/16:9/w_2352,h_1323,c_limit/Screen%20Shot%202023-05-08%20at%204.07.48%20PM.png"
         }
     ];
     return(
