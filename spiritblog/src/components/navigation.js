@@ -1,43 +1,34 @@
-import React from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
 
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from './context/authContext';
 
-const navLinks = [
-  {
-    title: 'Home',
-    path: '/'
-  },
-
-  // {
-  //   title: 'Shop',
-  //   path: '/shop'
-  // },
-  {
-    title: 'Blog',
-    path: '/blog'
-  },
-  {
-    title: 'Login',
-    path: '/login'
-  },
-  {
-    title: 'Create',
-    path: '/create'
-  }
-];
 
 export default function Navigation() {
+  const { currentUser, logout } = useContext(AuthContext);
+
   return (
     <nav className="site-navigation">
+      <Link className='link' to = "">
       <span className="site-title">SPIRIT</span>
+      </Link>
       <ul className="nav-options">
-        {navLinks.map((link, index) => (
-          <li key={index}>
-            <Link to={link.path}>{link.title}</Link>
-          </li>
-        ))}
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        {/* Commented out shop link */}
+        {/* <li>
+          <Link to="/shop">Shop</Link>
+        </li> */}
+        <li>
+          <Link to="/blog">Blog</Link>
+        </li>
+        <li>
+          <Link to="/create">Create</Link>
+        </li>
+        <li>{currentUser?.username}</li>
+        {currentUser ? <li className='clickable' onClick ={logout} > Logout</li> : <Link to = "login">Login</Link>}
       </ul>
     </nav>
   );
 }
-

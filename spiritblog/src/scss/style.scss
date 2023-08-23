@@ -107,7 +107,16 @@
     gap: 30px;
     margin-left: 10px;
     .item{
+      display: flex;
+      flex-direction: column;
       flex:1;
+      .upload{
+        margin: 10px;
+        &:hover{
+          color:red;
+          cursor:pointer;
+        }
+      }
     
       .buttons{
         button{
@@ -115,6 +124,7 @@
           cursor: pointer;
           padding:10px;
           color: gray;
+          gap:10px;
           
       
         }
