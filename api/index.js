@@ -9,17 +9,18 @@ app.use(express.json())
 app.use(cookieParser())
 const storage = multer.diskStorage({
     destination: function (req,file,cb) {
-        cb(null, '../spiritblog/public/upload')
+        cb(null, '../spiritblog/public/uploads')
     }, 
     filename: function (req,file,cb){
      
         cb(null, Date.now()+file.originalname)
     }
 })
-const upload = multer({storage })
+const upload = multer({storage})
 app.post('/api/upload', upload.single('file'), function(req, res){
     const file = req.file;
-    res.status(200).json(file.filename)
+    res.status(200).json(file.filename )
+    console.log(file.filename);
 })
 
 app.use(express.json())

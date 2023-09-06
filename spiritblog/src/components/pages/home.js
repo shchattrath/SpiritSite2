@@ -38,43 +38,33 @@ const Home = () => {
     //    }2
     // ];
 
+    const getText = (html) =>{
+        const doc = new DOMParser().parseFromString(html, "text/html")
+        return doc.body.textContent
+    }
+
+
     return (
         <div className='home'>
-            <div className='posts'>
-                {posts.map((post, index) => (
-                    <div className={`post ${index % 2 === 0 ? 'left' : 'right'}`} key={post.id}>
-                        {index % 2 === 0 ? (
-                            <>
-                                <div className="img">
-                                    <img src={post.img} alt="" />
-                                </div>
-                                <div className='content'>
-                                    <Link to={`/post/${post.id}`} className="clickable">
-                                        <h1>{post.title}</h1>
-                                    </Link>
-                                    <p>{post.desc}</p>
-                                  
-                                </div>
-                            </>
-                        ) : (
-                            <>
-                                <div className='content'>
-                                    <Link to={`/post/${post.id}`} className="clickable">
-                                        <h1>{post.title}</h1>
-                                    </Link>
-                                    <p>{post.desc}</p>
-                                    
-                                </div>
-                                <div className="img">
-                                    <img src={post.img} alt="" />
-                                </div>
-                            </>
-                        )}
+        <div className='posts'>
+            {posts.map((post) => (
+                <div key={post.id} className='post'>
+                    <div className="img">
+                        <img src={`./uploads/${post.img}`} alt="" />
                     </div>
-                ))}
-            </div>
+                    <div className='content'>
+                        <Link to={`/post/${post.id}`} className="clickable">
+                            <h1>{post.title}</h1>
+                        </Link>
+                        <p>{getText(post.desc)}</p>
+                    </div>
+                </div>
+            ))}
         </div>
-    );
-};
+    </div>
+    )
+}
 
 export default Home;
+
+            

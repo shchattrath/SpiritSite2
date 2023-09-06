@@ -14,12 +14,23 @@ const Create = () => {
 
     const upload = async () =>{
         try{
+            
+            
             console.log("success")
             const formData = new FormData();
-            formData.append("file",file)
+            console.log(file);
+            formData.append("file",file);
+            for (let pair of formData.entries()) {
+                console.log(pair[0], pair[1]);
+            }
+    
             const res = await axios.post("/upload", formData)
+            console.log(res.data)
+          
             console.log("Image Succesfully Uploaded")
+          
             return res.data
+
         }
 
         catch(err){
@@ -30,21 +41,21 @@ const Create = () => {
     }
     const handleClick = async e=>{
          e.preventDefault()
-         const imgUrl = upload()
-
+         const imgUrl = await upload()
          try{
             state ? await axios.put(`/posts/${state.id}`, {   
                 title,
                 desc:value,
                 cat,
                 img:file ? imgUrl : ""
-            }) : await axios.post(`/posts`, {   
+            }) : await axios.post(`/posts/`, { 
+                //fixing this. ive been sitting down for a few hours so i'll get back to this in a bit  
                   title,
                   desc:value,
                   cat,
                   img:file ? imgUrl : "",
                   date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss")
-            })
+            });
          }
          catch(err){
             console.log(err)
@@ -73,7 +84,7 @@ const Create = () => {
                     <label className = "upload" htmlFor="file">Upload Image</label>
                 
                     <div className="buttons">
-                        <button>Publish</button>
+                        <button onClick ={handleClick}>Publish</button>
                         <button onClick={handleClick}>Save as draft</button>
                     </div>
                 </div>
