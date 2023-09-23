@@ -34,24 +34,30 @@ const Single = () => {
         }
     }
 
+    const getText = (html) =>{
+        const doc = new DOMParser().parseFromString(html, "text/html")
+        return doc.body.textContent
+    }
+
+
     return(
         
         <div className='single'>
             <div className='content'>
             <h1>{post.title}</h1>
-                    <img className = "image" src = {post?.img}/>
+                  <img className = "image" src = {`/uploads/${post.img}`}/>
                         
             {currentUser?.username === post.username &&  <div className='edit'>
                     <Link to={'/create?edit=1'} state = {post}>
                     <img src = 'https://cdn.onlinewebfonts.com/svg/img_53536.png' alt = 'edit'/>
                     </Link>
-                    <p onClick={handleDelete}>DELETE POST</p>
+                    <img src = 'https://pic.onlinewebfonts.com/thumbnails/icons_377999.svg'alt = 'delete' onClick={handleDelete}/>
                 </div>
             }
-            <h3>{post.username}</h3>
-            <p> {moment(post.date).fromNow()}</p>
+            <h3 className='info'>{post.username}</h3>
+            <p className='info'> {moment(post.date).fromNow()}</p>
             <div className='body'>
-                     {post.desc}
+                     {getText(post.desc)}
             </div>
             </div>
             {/* <div className='menu'>

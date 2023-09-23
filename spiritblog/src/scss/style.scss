@@ -27,20 +27,27 @@
       }
     
       .edit{
+      
         display: flex;
         align-items: center;
+        flex-direction: row; /* Add this line to make them left to right */
         
-        cursor:pointer;
+       
         img{
           width: 20px;
           height: 20px;
           margin-left: 30vw;
+          margin-right: -28vw;
           object-fit: cover;
+          cursor:pointer;
         }
+      }
+      .info{
+        margin-left: 25vw;
       }
       .body{
         font-size: 20px;
-        margin-left: 80px;
+        margin-left: 20vw;
         margin-right: 80px;
         text-align: justify;
         line-height: 35px;
@@ -58,6 +65,7 @@
     }
     .post{
         img{
+
           width:280px;
           height: auto;
           object-fit: cover;
